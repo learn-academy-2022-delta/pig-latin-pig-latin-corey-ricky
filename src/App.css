@@ -6,19 +6,39 @@ body {
 
 h1 {
   font-size: 5rem;
-  color:rgba(243, 78, 255, 0.945)
+  color:rgba(60, 177, 255, 0.945)
 }
 
+h2 {
+  font-size: 1.5rem;
+  color: rgb(255, 178, 45)
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+  color:rgba(83, 0, 172, 0.945)
+}  
+
+
 button {
+  font-size: 1.5rem;
   margin: 4rem;
-  border-radius: 0.9rem;
-  padding: 1rem;
-  border-color: rgb(0, 0, 0);
+  border-radius: 3rem;
+  padding: 2rem;
+  border-color: rgb(170, 251, 111);
+  background-color: rgb(180, 254, 139);
+  
 }
 
 
 footer {
   padding: 2rem;
+  font-size: 1.5rem;
+  color:rgba(0, 162, 255, 0.945)
 }
 
 .butcherPig {
@@ -27,17 +47,17 @@ footer {
 }
 
 .userInput {
-  border-radius: .5rem;
-  font-size: 1rem;
+  border-radius: 1.5rem;
+  font-size: 2.5rem;
   height: 5rem;
-  width: 20rem;
+  width: 50rem;
   text-align: center;
 }
 
 .inputArea {
-  background-color: rgba(243, 78, 255, 0.945);
+  background-color: rgba(249, 160, 255, 0.945);
   color: rgb(255, 255, 255);
-  border-radius: .5rem;
+  border-radius: 5.5rem;
   padding: 1rem;
 }
 
@@ -46,7 +66,7 @@ footer {
     font-size: 2rem;
   }
   .userInput{
-    font-size: 1rem;
+    font-size: 3rem;
     height: 5rem;
     width: 90%;
     padding: 1rem;

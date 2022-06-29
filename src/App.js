@@ -137,8 +137,10 @@ console.log(translatePigLatin("apple"))
           alt="pig with butcher cut names in pig latin"
           className="butcherPig"
         />
+        <h2>"earninglay ewnay illsskay areway unfay"</h2>
         <div className="inputArea">
-          <h4>Enter phrase to be translated:</h4>
+          <h4>LEARN PEPPA PIG LATIN</h4>
+          <h5>"ENTER TEXT BELOW"</h5>
           {/* user input field - every DOM event that happens in the input will call the handleChange method and update state */}
           <input
             type="text"
@@ -152,7 +154,7 @@ console.log(translatePigLatin("apple"))
           <button onClick={this.restartGame}>Clear</button>
         </div>
         <p>{this.state.phraseTranslated}</p>
-        <footer>Coded by Corey & Rick ~</footer>
+        <footer>~ Coded by Corey & Rick ~</footer>
       </>
     )
   }
