@@ -52,18 +52,39 @@ class App extends Component {
 // As a user, the page is styled, and pleasing to use.
 
 let translatePigLatin =(str) =>  {
-    let currentWord = "";
+  let currentWord = "";
 
-    if (vowelsArray.indexOf(str[0]) > -1) {
-        currentWord = str + "way";
-        return currentWord;
-    } else {
-        let firstMatch = str.match(/[aeiou]/g) || 0;
-        let vowel = str.indexOf(firstMatch[0]);
-        currentWord = str.substring(vowel) + str.substring(0, vowel) + "ay";
-        return currentWord;
+  if (vowelsArray.indexOf(str[0]) > -1) {
+      currentWord = str + "way";
+      return currentWord;
+  }else if(str.slice(0,2) === "qu"){
+    return (str.slice(2) + str.slice(0,2) + "ay") 
+  }else if(str[0] === "y" || str.charAt(str.length - 1) === "y"){
+    if(str[0] === "y"){
+      let first = str[0] === "y"
+      currentWord = str.substring(first) + str.substring(0, first) + "way";
+      return currentWord;
+    }else{
+      return str + "way"
     }
+      
+  }else{
+      let firstMatch = str.match(/[aeiou]/g) || 0;
+      let vowel = str.indexOf(firstMatch[0]);
+      currentWord = str.substring(vowel) + str.substring(0, vowel) + "ay";
+      return currentWord;
+  }
+  
+  
 }
+//console.log(translatePigLatin(currentWord))
+//console.log(translatePigLatin(currentWord))
+//console.log(translatePigLatin(this.state.phrase))
+//console.log(translatePigLatin(this.state.phraseTranslated))
+    
+    // Remember: console.log is your friend :)
+    // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
+    return (translatePigLatin(currentWord))
 console.log(translatePigLatin("apple"))
 //console.log(translatePigLatin(this.state.phrase))
 //console.log(translatePigLatin(this.state.phraseTranslated))
@@ -92,6 +113,8 @@ console.log(translatePigLatin("apple"))
     })
   }
 
+
+
   // no need to modify this method
   setUpPreventDefault = (e) => {
     // this method prevents React from refreshing the page unnecessarily
@@ -108,7 +131,7 @@ console.log(translatePigLatin("apple"))
   render() {
     return (
       <>
-        <h1>Pig Latin Translator</h1>
+        <h1>Peppa Pig Latin Translator</h1>
         <img
           src={butcherPig}
           alt="pig with butcher cut names in pig latin"
@@ -129,7 +152,7 @@ console.log(translatePigLatin("apple"))
           <button onClick={this.restartGame}>Clear</button>
         </div>
         <p>{this.state.phraseTranslated}</p>
-        <footer>Coded by Darwin & Neco ~</footer>
+        <footer>Coded by Corey & Rick ~</footer>
       </>
     )
   }
